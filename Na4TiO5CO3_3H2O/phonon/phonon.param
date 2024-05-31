@@ -1,0 +1,13 @@
+comment          : phonon calc with some thermo stuff at 298 K 
+task             : thermodynamics       
+xc_functional    : PBE  
+opt_strategy     : Speed        
+cut_off_energy   : 850 eV    
+fix_occupancy    : true         
+elec_method      : edft
+elec_energy_tol  : 0.000000001 eV
+phonon_sum_rule  : true         
+max_scf_cycles   : 200
+thermo_t_start   : 10 K
+thermo_t_stop    : 1000 K
+thermo_t_npoints : 199
