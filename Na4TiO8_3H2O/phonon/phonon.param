@@ -1,0 +1,29 @@
+comment          : phonon calc with some thermo stuff at 298 K 
+task             : thermodynamics       
+xc_functional    : PBE  
+opt_strategy     : Speed        
+cut_off_energy   : 850 eV    
+fix_occupancy    : true         
+elec_method      : edft
+elec_energy_tol  : 0.0000000001 eV
+phonon_sum_rule  : true         
+max_scf_cycles   : 250
+thermo_t_start   : 10 K
+thermo_t_stop    : 1000 K
+thermo_t_npoints : 199
+
+
+
+
+!    cat this to the end of the cell file
+!    %block SPECIES_POT
+!    NCP
+!    %endblock SPECIES_POT
+!    
+!    SYMMETRY_GENERATE
+!    
+!    KPOINT_MP_GRID 2 2 2
+!    
+!    %block PHONON_KPOINT_LIST  
+!        0.0   0.0   0.0    1.0        ! Wavevector of phonon(s) to compute ( qx qy qz, weight)  
+!    %endblock PHONON_KPOINT_LIST 
